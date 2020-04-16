@@ -1,9 +1,15 @@
 <div class="container justiyf-content-center">
-  <form action="" class="form-signin">
+  <form
+    action=""
+    class="form-signin"
+    [formGroup]="registerForm"
+    (ngSubmit)="onSubmit()"
+  >
     <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
     <div class="form-group">
       <label for="inputUsername" class="sr-only">Username</label>
       <input
+        [formControlName]="'username'"
         type="text"
         class="form-control"
         id="inputUsername"
@@ -15,6 +21,7 @@
     <div class="form-group">
       <label for="inputEmail" class="sr-only">Email</label>
       <input
+        [formControlName]="'email'"
         type="text"
         class="form-control"
         id="inputEmail"
@@ -26,6 +33,7 @@
     <div class="form-group">
       <label for="inputPassword" class="sr-only">Password</label>
       <input
+        [formControlName]="'password'"
         type="password"
         class="form-control"
         id="inputPassword"
@@ -36,6 +44,7 @@
     <div class="form-group">
       <label for="inputConfirmPassword" class="sr-only">Password</label>
       <input
+        [formControlName]="'confirmPassword'"
         type="password"
         class="form-control"
         id="inputConfirmPassword"
